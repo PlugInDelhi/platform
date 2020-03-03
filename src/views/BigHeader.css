@@ -1,0 +1,27 @@
+header {
+    height: 150px;
+    margin: 0px 50px;
+}
+
+header > .logo-img {
+    height: 90%;
+}
+
+header > ul {
+    font-family: 'quicksand';
+    list-style-type: none;
+    margin: 40px 0px;
+    padding: 0px;
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+}
+
+header > ul > li {
+    padding: 0px 18px;
+    display: inline-block;
+}
+
+header > ul > li > a, header > ul > li > a:hover {
+    color: #000;
+}
