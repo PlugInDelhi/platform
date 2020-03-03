@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
+
 import './App.css';
+
+
+import Home from './userpages/Home'
+import Policy from './userpages/policy/Policy'
+import Hub from './userpages/hub/Hub'
+import BigHeader from './views/BigHeader'
+import TwitterNearFeed from './views/TwitterNearFeed'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <Router>
+        <BigHeader/>
+        <Switch>
+          <Route exact path="/ev" component={Home} />
+          <Route path="/ev/policy" component={Policy} />
+          <Route path="/ev/hub" component={Hub} />
+          <Route path="/ev/events" component={TwitterNearFeed} />
+        </Switch>
+      </Router>
     </div>
   );
 }
